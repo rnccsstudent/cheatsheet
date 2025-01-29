@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Cheatsheet</title>
+    
+    <!-- Prism.js CSS (Default Light Theme) -->
+    <link id="theme-style" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🚀 Programming Cheatsheet</h1>
+        <input type="text" id="search-box" placeholder="🔍 Search for a language or keyword...">
+        <button id="dark-mode-toggle">🌙 Dark Mode</button>
+    </header>
+
+    <div class="container" id="code-container">
+        <!-- Python Section -->
+        <div class="code-block" data-language="python">
+            <h2><!--<img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" style="width: 2em; height: 2em; vertical-align: middle; margin-right: 8px;">-->🐍 Python</h2>
+            <pre><code class="language-python">print("Hello, World!")</code></pre>
+            <button onclick="copyCode(this)">Copy</button>
+            <button onclick="downloadCode(this, 'python')">Download</button>
+            <button onclick="editCode(this)">Edit</button>
+        </div>
+
+        <!-- PHP Section -->
+        <div class="code-block" data-language="php">
+            <h2><img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP Logo" style="width: 2em; height: 2em; vertical-align: middle; margin-right: 8px;">PHP</h2>
+            <pre><code class="language-php">&lt;?php echo "Hello, World!"; ?&gt;</code></pre>
+            <button onclick="copyCode(this)">Copy</button>
+            <button onclick="downloadCode(this, 'php')">Download</button>
+            <button onclick="editCode(this)">Edit</button>
+        </div>
+
+        <!-- C Section -->
+        <div class="code-block" data-language="c">
+            <h2><!--<img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/C_logo.svg" alt="C Logo" style="width: 2em; height: 2em; vertical-align: middle; margin-right: 8px;">-->🔷 C Language</h2>
+            <pre><code class="language-c">#include &lt;stdio.h&gt;
+    int main() {
+        printf("Hello, World!\n");
+        return 0;
+    }</code></pre>
+            <button onclick="copyCode(this)">Copy</button>
+            <button onclick="downloadCode(this, 'c')">Download</button>
+            <button onclick="editCode(this)">Edit</button>
+        </div>
+
+        <!-- C++ Section -->
+        <div class="code-block" data-language="cpp">
+            <h2><img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++ Logo" style="width: 2em; height: 2em; vertical-align: middle; margin-right: 8px;"> C++</h2>
+            <pre><code class="language-cpp">#include <iostream>
+using namespace std;
+int main() {
+    cout << "Hello, World!" << endl;
+    return 0;
+}</code></pre>
+            <button onclick="copyCode(this)">Copy</button>
+            <button onclick="downloadCode(this, 'cpp')">Download</button>
+            <button onclick="editCode(this)">Edit</button>
+        </div>
+
+        <!-- Java Section -->
+        <div class="code-block" data-language="java">
+            <h2><!--<img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Java_logo_and_wordmark.svg" alt="Java Logo" style="width: 2em; height: 2em; vertical-align: middle; margin-right: 8px;">-->☕ Java</h2>
+            <pre><code class="language-java">public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}</code></pre>
+            <button onclick="copyCode(this)">Copy</button>
+            <button onclick="downloadCode(this, 'java')">Download</button>
+            <button onclick="editCode(this)">Edit</button>
+        </div>
+
+        <!-- MySQL Section -->
+        <div class="code-block" data-language="mysql">
+            <h2><!--<img src="https://upload.wikimedia.org/wikipedia/commons/6/61/MySQL_logo.svg" alt="MySQL Logo" style="width: 2em; height: 2em; vertical-align: middle; margin-right: 8px;">-->🔒 MySQL</h2>
+            <pre><code class="language-mysql">SELECT * FROM users;</code></pre>
+            <button onclick="copyCode(this)">Copy</button>
+            <button onclick="downloadCode(this, 'mysql')">Download</button>
+            <button onclick="editCode(this)">Edit</button>
+        </div>
+
+        <!-- HTML Section -->
+        <div class="code-block" data-language="html">
+            <h2><!--<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/HTML5_Logo.svg" alt="HTML Logo" style="width: 2em; height: 2em; vertical-align: middle; margin-right: 8px;">-->🌐 HTML</h2>
+            <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Hello World&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            <button onclick="copyCode(this)">Copy</button>
+            <button onclick="downloadCode(this, 'html')">Download</button>
+            <button onclick="editCode(this)">Edit</button>
+        </div>
+
+        <!-- CSS Section -->
+        <div class="code-block" data-language="css">
+            <h2><!--<img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo_and_wordmark.svg" alt="CSS Logo" style="width: 2em; height: 2em; vertical-align: middle; margin-right: 8px;">-->🎨 CSS</h2>
+            <pre><code class="language-css">body {
+    background-color: #f0f0f0;
+    color: #333;
+}</code></pre>
+            <button onclick="copyCode(this)">Copy</button>
+            <button onclick="downloadCode(this, 'css')">Download</button>
+            <button onclick="editCode(this)">Edit</button>
+        </div>
+
+        <!-- JavaScript Section -->
+        <div class="code-block" data-language="javascript">
+            <h2><!--<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.svg" alt="JavaScript Logo" style="width: 2em; height: 2em; vertical-align: middle; margin-right: 8px;">-->📜 JavaScript</h2>
+            <pre><code class="language-javascript">console.log("Hello, World!");</code></pre>
+            <button onclick="copyCode(this)">Copy</button>
+            <button onclick="downloadCode(this, 'javascript')">Download</button>
+            <button onclick="editCode(this)">Edit</button>
+        </div>
+    </div>
+
+    <!-- Prism.js Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-clike.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-php.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-mysql.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+
+    <script src="script.js"></script>
+    
+    <script>
+        function editCode(button) {
+            const codeBlock = button.parentElement.querySelector('pre code');
+            const isEditable = codeBlock.contentEditable === 'true';
+
+            // Toggle editability
+            codeBlock.contentEditable = isEditable ? 'false' : 'true';
+            
+            // Change button text based on editability
+            button.textContent = isEditable ? 'Edit' : 'Save';
+        }
+    </script>
+</body>
+</html>

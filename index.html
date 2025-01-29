@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Cheatsheet</title>
+    
+    <!-- Prism.js CSS (Default Light Theme) -->
+    <link id="theme-style" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🚀 Programming Cheatsheet</h1>
+        <input type="text" id="search-box" placeholder="🔍 Search for a language or keyword...">
+        <button id="dark-mode-toggle">🌙 Dark Mode</button>
+    </header>
+
+    <div class="container" id="code-container">
+        <!-- Python Section -->
+        <div class="code-block" data-language="python">
+            <h2>🐍 Python</h2>
+            <pre><code class="language-python">print("Hello, World!")</code></pre>
+            <button onclick="copyCode(this)">Copy</button>
+            <button onclick="downloadCode(this, 'python')">Download</button>
+            <button onclick="editCode(this)">Edit</button>
+        </div>
+
+        <!-- PHP Section -->
+        <div class="code-block" data-language="php">
+            <h2>🌐 PHP</h2>
+            <pre><code class="language-php">&lt;?php echo "Hello, World!"; ?&gt;</code></pre>
+            <button onclick="copyCode(this)">Copy</button>
+            <button onclick="downloadCode(this, 'php')">Download</button>
+            <button onclick="editCode(this)">Edit</button>
+        </div>
+
+        <!-- C Language Section -->
+        <div class="code-block" data-language="c">
+            <h2>🔷 C Language</h2>
+            <pre><code class="language-c">#include &lt;stdio.h&gt;
+    int main() {
+        printf("Hello, World!\n");
+        return 0;
+    }</code></pre>
+            <button onclick="copyCode(this)">Copy</button>
+            <button onclick="downloadCode(this, 'c')">Download</button>
+            <button onclick="editCode(this)">Edit</button>
+        </div>
+    </div>
+
+    <!-- Prism.js Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-clike.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-php.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+
+    <script src="script.js"></script>
+    
+    <script>
+        function editCode(button) {
+            const codeBlock = button.parentElement.querySelector('pre code');
+            const isEditable = codeBlock.contentEditable === 'true';
+
+            // Toggle editability
+            codeBlock.contentEditable = isEditable ? 'false' : 'true';
+            
+            // Change button text based on editability
+            button.textContent = isEditable ? 'Edit' : 'Save';
+        }
+    </script>
+</body>
+</html>
